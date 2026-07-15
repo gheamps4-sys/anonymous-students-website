@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body {
+      background: linear-gradient(to bottom, #4b0082, #2b004b);
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .admin-container {
+      width: 90%; max-width: 600px;
+      margin-top: 0;
+    }
+
+    .admin-title {
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .panel-wrapper {
+      display: flex;
+      gap: 15px;
+      background: #e0e0e0;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .sidebar {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sidebar button {
+      padding: 9px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .sidebar .active { background: black; color: white; }
+
+    .content-area {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* === SENDER ID'S: FULL MESSAGE SHOWN === */
+    .id-list {
+      background: white;
+      border-radius: 8px;
+      padding: 12px;
+      min-height: 250px;
+      font-size: 13px;
+      line-height: 1.7;
+      overflow-y: auto;
+      white-space: pre-wrap;
+    }
+
+    .reply-input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .reply-box {
+      width: 100%;
+      min-height: 120px;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      resize: none;
+    }
+    .send-btn {
+      width: 100%;
+      padding: 10px;
+      background: #4b0082;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    <h2 class="admin-title">ADMIN PANEL 🔒</h2>
+
+    <div class="panel-wrapper">
+      <div class="sidebar">
+        <button onclick="showTab('dashboard')">DASHBOARD</button>
+        <button class="active" onclick="showTab('sender')">SENDER ID'S</button>
+        <button onclick="showTab('reply')">REPLYERS PANEL</button>
+      </div>
+
+      <div class="content-area">
+        <div id="sender-tab">
+          <div class="id-list" id="id-display">Loading...</div>
+        </div>
+
+        <div id="reply-tab" style="display:none;">
+          <form method="POST" action="/reply">
+            <input type="text" name="msgId" class="reply-input" placeholder="ENTER ID HERE" required>
+            <textarea name="replyText" class="reply-box" placeholder="ENTER YOUR REPLY HERE" required></textarea>
+            <button type="submit" class="send-btn">SEND REPLY</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tab) {
+      document.getElementById('sender-tab').style.display = 'none';
+      document.getElementById('reply-tab').style.display = 'none';
+      document.querySelectorAll('.sidebar button').forEach(b => b.classList.remove('active'));
+
+      if(tab === 'sender') {
+        document.getElementById('sender-tab').style.display = 'block';
+        document.querySelectorAll('.sidebar button')[1].classList.add('active');
+      }
+      if(tab === 'reply') {
+        document.getElementById('reply-tab').style.display = 'block';
+        document.querySelectorAll('.sidebar button')[2].classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>

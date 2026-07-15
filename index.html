@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share Your Thoughts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="main-card">
+      <p class="header-text">😊Write your thoughts and feelings here in the box😊</p>
+
+      <form action="/submit" method="POST">
+        <textarea id="message-input" name="message" placeholder="Write here!" required maxlength="1000"></textarea>
+
+        <button type="submit" class="btn">Click here to submit</button>
+      </form>
+
+      <div class="id-display" id="id-box">Message ID will appear here</div>
+
+      <button class="btn" id="get-id-btn" style="opacity:0.7; cursor:not-allowed;">Click here to get message ID</button>
+
+      <div class="instructions">
+        <strong>How to use this website?</strong><br>
+        Write your thoughts or feelings at the first box after submitting click the button that says click here to get message ID after getting that click this link <a href="/check">LINK HERE</a> if the responder has replied to your message. NOTE THAT REPLYING TO YOUR MESSAGE CAN TAKE TIME SO BE PATIENT😊
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Show ID after submit (matches your design flow)
+    const savedId = localStorage.getItem('lastMsgId');
+    if (savedId) {
+      document.getElementById('id-box').textContent = `Your ID: ${savedId}`;
+      const getBtn = document.getElementById('get-id-btn');
+      getBtn.style.opacity = '1';
+      getBtn.style.cursor = 'pointer';
+      getBtn.onclick = () => {
+        navigator.clipboard.writeText(savedId);
+        alert('ID copied! Go to /check to see replies');
+      };
+    }
+  </script>
+</body>
+</html>

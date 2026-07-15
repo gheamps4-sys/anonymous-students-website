@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+
+  /* ==============================================
+     ✅ PUT YOUR IMAGE FILE NAME HERE!
+     If your image is named: background.jpg / my-bg.png / etc.
+     Just replace "your-image.png" with YOUR actual file name!
+     ============================================== */
+  background: #87CEEB url('bg.jpeg') no-repeat center center fixed;
+  background-size: cover; /* Makes background fill the whole screen nicely */
+  padding: 2rem 1rem;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.main-card {
+  background: rgba(255, 255, 255, 0.92); /* Slight transparency so background shows through */
+  border-radius: 24px;
+  padding: 2rem 1.8rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  backdrop-filter: blur(6px);
+}
+
+.header-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  color: #222;
+}
+
+#message-input {
+  width: 100%;
+  min-height: 140px;
+  border: none;
+  border-radius: 16px;
+  padding: 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 1.5rem;
+  resize: none;
+}
+
+#message-input:focus {
+  outline: 2px solid #2196F3;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-bottom: 1.2rem;
+}
+
+.btn:hover {
+  background: #1976D2;
+  transform: translateY(-2px);
+}
+
+.id-display {
+  width: 100%;
+  padding: 0.9rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.instructions {
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  padding: 1.2rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.instructions strong {
+  color: #2196F3;
+}
+
+.instructions a {
+  color: #2196F3;
+  font-weight: bold;
+  text-decoration: underline;
+}

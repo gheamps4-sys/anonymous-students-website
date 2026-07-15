@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Check Replies</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body {
+      background: linear-gradient(to bottom, #4b0082, #2b004b);
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 30px 20px;
+    }
+
+    .check-container {
+      width: 90%; max-width: 500px;
+      background: #e0e0e0;
+      border-radius: 12px;
+      padding: 25px;
+    }
+
+    .page-title {
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .form-area {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .id-input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    .check-btn {
+      width: 100%;
+      padding: 12px;
+      background: #4b0082;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .back-link a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h2 class="page-title">CHECK YOUR REPLIES 🔍</h2>
+
+    <div class="check-container">
+      <form method="POST" action="/check-now" class="form-area">
+        <input 
+          type="text" 
+          name="msgId" 
+          class="id-input" 
+          placeholder="ENTER YOUR ID HERE" 
+          required
+        >
+        <button type="submit" class="check-btn">CHECK REPLIES</button>
+      </form>
+    </div>
+
+    <div class="back-link">
+      <a href="/">← GO BACK TO HOME</a>
+    </div>
+  </div>
+</body>
+</html>

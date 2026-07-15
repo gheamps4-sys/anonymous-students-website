@@ -1,0 +1,119 @@
+[
+  {
+    "id": "9e9a0bcaa6f0a71f",
+    "text": "Hello testing",
+    "time": "7/15/2026, 6:45:18 PM",
+    "replies": [
+      {
+        "text": "hello working",
+        "time": "7/15/2026, 6:45:49 PM"
+      }
+    ]
+  },
+  {
+    "id": "5a3cb2ac684fab33",
+    "text": "testing",
+    "time": "7/15/2026, 6:35:24 PM",
+    "replies": [
+      {
+        "text": "testing 2",
+        "time": "7/15/2026, 6:37:07 PM"
+      }
+    ]
+  },
+  {
+    "id": "a782adf4891785f4",
+    "text": "Hi",
+    "time": "7/15/2026, 6:30:16 PM",
+    "replies": [
+      {
+        "text": "Hello",
+        "time": "7/15/2026, 6:30:34 PM"
+      }
+    ]
+  },
+  {
+    "id": "14287e0e3770f478",
+    "text": "Hello there lol",
+    "time": "7/15/2026, 6:26:15 PM",
+    "replies": []
+  },
+  {
+    "id": "9e6551327bc210df",
+    "text": "Ihh apaka angassss",
+    "time": "2026-07-15T08:43:24.939Z",
+    "replies": [
+      {
+        "text": "jijimon HAHA",
+        "time": "2026-07-15T08:44:01.641Z"
+      }
+    ]
+  },
+  {
+    "id": "b126b1661463636c",
+    "text": "Hello po",
+    "time": "2026-07-15T08:40:27.935Z",
+    "replies": [
+      {
+        "text": "hello din",
+        "time": "2026-07-15T08:41:57.751Z"
+      }
+    ]
+  },
+  {
+    "id": "17bf15d6ed8090ad",
+    "text": "Say walahi",
+    "time": "2026-07-15T08:29:17.890Z",
+    "replies": [
+      {
+        "text": "lol",
+        "time": "2026-07-15T08:29:46.874Z"
+      }
+    ]
+  },
+  {
+    "id": "c09e02cb6909f2dc",
+    "text": "Hello po",
+    "time": "2026-07-14T13:06:05.809Z",
+    "replies": [
+      {
+        "text": "Hello there to",
+        "time": "2026-07-14T13:06:38.987Z"
+      }
+    ]
+  },
+  {
+    "id": "635bcd87161298a6",
+    "text": "Hi",
+    "time": "2026-07-14T13:04:25.346Z",
+    "replies": [
+      {
+        "text": "Hello there",
+        "time": "2026-07-14T13:04:58.318Z"
+      }
+    ]
+  },
+  {
+    "id": "a6bb15157a88ac00",
+    "text": "Hello",
+    "time": "2026-07-14T12:58:32.465Z",
+    "replies": [
+      {
+        "text": "Hi",
+        "time": "2026-07-14T12:59:07.558Z"
+      }
+    ]
+  },
+  {
+    "id": "435319d2775b1b50",
+    "text": "Hi",
+    "time": "2026-07-14T12:51:48.277Z",
+    "replies": []
+  },
+  {
+    "id": "27718a4b18a04f19",
+    "text": "Hi",
+    "time": "2026-07-14T12:49:52.205Z",
+    "replies": []
+  }
+]
